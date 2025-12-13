@@ -24,7 +24,7 @@ export function AboutSection() {
   ]
 
   return (
-    <section className="min-h-screen pt-40 pb-20 px-6 relative overflow-hidden">
+    <section className="min-h-screen pt-32 pb-20 px-6 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
@@ -50,19 +50,15 @@ export function AboutSection() {
           <div className={`transition-all duration-700 delay-200 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
             <div className="bg-gradient-to-br from-gray-900/50 to-gray-950/50 rounded-lg p-8 border border-gray-800 backdrop-blur-sm">
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                I'm a graphic designer fascinated by the intersection of form, color, and meaning. With over 5 years of
-                experience, I've worked with brands to craft visual experiences that resonate and inspire.
+                I'm a third-year graphic design student who enjoys figuring things out through design. I like starting with an idea, questioning it, breaking it down, and slowly shaping it into something that feels clear and meaningful.
               </p>
 
               <p className="text-gray-400 text-base leading-relaxed mb-6">
-                My approach is rooted in research, storytelling, and a deep understanding of design principles. I
-                believe that great design isn't just about aesthetics—it's about communicating ideas clearly and
-                memorably.
+                Most of my learning has come from experimenting, making mistakes, and refining my work through feedback. I'm especially interested in how design can communicate stories, emotions, and ideas in a simple but thoughtful way.
               </p>
 
               <p className="text-gray-400 text-base leading-relaxed">
-                When I'm not designing, you'll find me exploring museums, studying typography, experimenting with new
-                tools, or just observing the world around me for inspiration.
+                Right now, I'm building my portfolio and looking for internship opportunities where I can learn from real projects, collaborate with others, and grow as a designer while contributing my skills.
               </p>
             </div>
           </div>

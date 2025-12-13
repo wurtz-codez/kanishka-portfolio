@@ -3,8 +3,21 @@
 import type React from "react"
 
 import { useEffect, useState } from "react"
-import { Mail, MapPin, Linkedin, Instagram, Dribbble, Github, Send, CheckCircle } from "lucide-react"
+import { Mail, MapPin, Linkedin, Instagram, Send, CheckCircle } from "lucide-react"
+import Image from "next/image"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+
+// Behance Icon Component - Using PNG image
+const Behance = ({ size = 24, className = "" }: { size?: number; className?: string }) => (
+  <img
+    src="/behance-icon.png"
+    alt="Behance"
+    width={size}
+    height={size}
+    className={className}
+    style={{ width: size, height: size, display: 'block' }}
+  />
+)
 
 export function ContactSection() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -61,8 +74,7 @@ export function ContactSection() {
   const socialLinks = [
     { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com", color: "hover:text-blue-500" },
     { icon: Instagram, label: "Instagram", href: "https://instagram.com", color: "hover:text-pink-500" },
-    { icon: Dribbble, label: "Dribbble", href: "https://dribbble.com", color: "hover:text-red-500" },
-    { icon: Github, label: "GitHub", href: "https://github.com", color: "hover:text-gray-400" },
+    { icon: Behance, label: "Behance", href: "https://behance.net", color: "hover:text-blue-400" },
   ]
 
   return (

@@ -19,6 +19,7 @@ export function SkillsSection() {
       icon: Figma,
       description: "Professional software and platforms I use daily",
       skills: [
+        { name: "Figma", description: "UI/UX design & prototyping" },
         { name: "Adobe Illustrator", description: "Vector graphics & illustration" },
         { name: "Photoshop", description: "Image editing & manipulation" },
         { name: "InDesign", description: "Page layout & publishing" },
@@ -153,28 +154,6 @@ export function SkillsSection() {
                 <p className="text-gray-400 text-sm">{skill.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Bottom CTA Section */}
-        <div
-          className={`mt-20 bg-gradient-to-r from-accent/5 to-transparent border border-gray-800 rounded-lg p-8 md:p-12 transition-all duration-700 delay-500 ${
-            isLoaded ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-2">Ready to see these skills in action?</h3>
-              <p className="text-gray-400">
-                Check out my project gallery to see real-world applications of these tools and techniques.
-              </p>
-            </div>
-            <a
-              href="/projects"
-              className="flex-shrink-0 px-8 py-4 bg-accent text-black font-semibold rounded-lg hover:bg-accent-dark transition-all duration-300 whitespace-nowrap"
-            >
-              View Projects
-            </a>
           </div>
         </div>
       </div>
