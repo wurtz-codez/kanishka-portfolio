@@ -7,7 +7,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [showScrollIndicator, setShowScrollIndicator] = useState(true)
-  const [imageSrc, setImageSrc] = useState("/profile-picture.jpg")
+  const [imageSrc, setImageSrc] = useState("/profile-picture.jpeg")
   const { ref: nameRef, transform: nameTransform, opacity: nameOpacity } = useScrollAnimation()
 
   useEffect(() => {
@@ -50,7 +50,7 @@ export function HeroSection() {
           <div className={`mb-8 transition-all duration-700 delay-200 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
             <h1 
               ref={nameRef}
-              className="text-7xl md:text-8xl font-bold leading-tight mb-4 transition-all duration-500 ease-out"
+              className="text-accent text-7xl md:text-8xl font-bold leading-tight mb-4 transition-all duration-500 ease-out"
               style={{ transform: `translateY(${nameTransform}px)`, opacity: nameOpacity }}
             >
               Kanishka
@@ -63,12 +63,12 @@ export function HeroSection() {
           </div>
 
               {/* Description */}
-          <div className={`transition-all duration-700 delay-300 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+          {/* <div className={`transition-all duration-700 delay-300 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
                 <p className="text-base md:text-lg text-gray-300 max-w-2xl leading-relaxed">
               Designing is like storytelling. I find the essence of an idea and shape it visually through story, concept,
               form, color, and typography.
             </p>
-              </div>
+              </div> */}
             </div>
 
             {/* Right Column - Profile Picture */}
