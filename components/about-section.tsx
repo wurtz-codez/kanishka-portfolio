@@ -24,14 +24,16 @@ export function AboutSection() {
   ]
 
   return (
-    <section className="min-h-screen pt-32 pb-20 px-6 relative overflow-hidden">
+     <section className="min-h-screen pt-16 pb-8 px-6 relative overflow-hidden">
+
       {/* Background decorative elements */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Title */}
-        <div className={`mb-16 transition-all duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+         <div className={`mb-8 transition-all duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+
           <span className="text-accent text-sm font-semibold uppercase tracking-widest">About</span>
           <h2 
             ref={titleRef}
@@ -45,7 +47,8 @@ export function AboutSection() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-8">
+
           {/* Left Column - Bio */}
           <div className={`transition-all duration-700 delay-200 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
             <div className="bg-gradient-to-br from-gray-900/50 to-gray-950/50 rounded-lg p-8 border border-gray-800 backdrop-blur-sm">

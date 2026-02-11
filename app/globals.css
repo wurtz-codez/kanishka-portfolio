@@ -4,21 +4,22 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #F55FF5;
-  --foreground: #1C1C1C;
+  --background: #ffffff;
+  --foreground: #ffffff;
+  --background-gradient: linear-gradient(135deg, #000000 0%, #1C1C1C 60%, #2563EB 100%);
   --accent: #2563EB;
   --accent-dark: #1e40af;
   --muted: #8E8E93;
   --muted-foreground: #a0a0a0;
-  --card: #F55FF5;
+  --card: #ffffff;
   --border: #8E8E93;
-  --background: #F55FF5;
-  --foreground: #1C1C1C;
+  --background: #ffffff;
+  --foreground: #ffffff;
   --accent: #2563EB;
   --accent-dark: #1e40af;
   --muted: #8E8E93;
   --muted-foreground: #a0a0a0;
-  --card: #F55FF5;
+  --card: #ffffff;
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
@@ -53,19 +54,20 @@
 
 .dark {
   --background: #1C1C1C;
-  --foreground: #F55FF5;
+  --foreground: #ffffff;
+  --background-gradient: linear-gradient(135deg, #1C1C1C 0%, #1C1C1C 60%, #2563EB 100%);
   --card: #1C1C1C;
-  --card-foreground: #F55FF5;
+  --card-foreground: #ffffff;
   --popover: #1C1C1C;
-  --popover-foreground: #F55FF5;
-  --primary: #F55FF5;
+  --popover-foreground: #ffffff;
+  --primary: #ffffff;
   --primary-foreground: #1C1C1C;
   --secondary: #8E8E93;
-  --secondary-foreground: #F55FF5;
+  --secondary-foreground: #ffffff;
   --muted: #8E8E93;
   --muted-foreground: #B0B0B3;
   --accent: #2563EB;
-  --accent-foreground: #F55FF5;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
   --border: #8E8E93;
@@ -77,11 +79,11 @@
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: #1C1C1C;
-  --sidebar-foreground: #F55FF5;
+  --sidebar-foreground: #ffffff;
   --sidebar-primary: #2563EB;
-  --sidebar-primary-foreground: #F55FF5;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #8E8E93;
-  --sidebar-accent-foreground: #F55FF5;
+  --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #8E8E93;
   --sidebar-ring: #2563EB;
 }
@@ -131,7 +133,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
   }
 }
 
@@ -140,6 +142,9 @@ html {
 }
 
 body {
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+  background-size: cover;
   background-color: var(--background);
   color: var(--foreground);
 }

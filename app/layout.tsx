@@ -8,9 +8,8 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] })
 
 export const metadata: Metadata = {
-  title: "Kanishka Pande - Graphic Designer",
+  title: "Kanishka's Portfolio",
   description: "Exploring the essence of design through storytelling, concept, form, color, and typography",
-  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -20,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.className} bg-black text-white antialiased`}>
+      <body className={`${spaceGrotesk.className} text-foreground antialiased`}>
         {children}
         <Analytics />
       </body>

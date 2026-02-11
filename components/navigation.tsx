@@ -1,13 +1,15 @@
 "use client"
 import { useState, useEffect } from "react"
 import { usePathname, useRouter } from "next/navigation"
-import { Menu, X, ArrowLeft } from "lucide-react"
+import { Menu, X, ArrowLeft, Sun, Moon } from "lucide-react"
+import { useTheme } from "next-themes"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
   const pathname = usePathname()
   const router = useRouter()
+  const { theme, setTheme } = useTheme()
   
   // Check if we're on the home page (single page sections) or a separate page
   const isHomePage = pathname === "/"
@@ -64,8 +66,9 @@ export function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-900">
-      <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <nav className="fixed top-4 w-full z-50 bg-transparent">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex items-center justify-between px-6 py-4 rounded-full border border-white/15 bg-foreground/10 backdrop-blur-xl shadow-[0_12px_40px_-18px_rgba(37,99,235,0.45)]">
         <div className="flex items-center gap-4">
           {!isHomePage && (
             <button
@@ -99,16 +102,17 @@ export function Navigation() {
             </button>
           ))}
         </div>
-
+        
         {/* Mobile Menu Button */}
         <button className="md:hidden text-accent hover-accent" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black border-b border-gray-900">
+        <div className="md:hidden bg-transparent">
           <div className="flex flex-col gap-4 px-6 py-4">
             {!isHomePage && (
               <button

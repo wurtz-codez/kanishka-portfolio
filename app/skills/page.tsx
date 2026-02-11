@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 
 export default function Skills() {
   return (
-    <main className="bg-black">
+    <main>
       <Navigation />
       <SkillsSection />
       <Footer />

@@ -174,14 +174,16 @@ export function ProjectsGallery() {
   const currentProjects = projects[activeCategory as keyof typeof projects]
 
   return (
-    <section className="min-h-screen pt-40 pb-20 px-6 relative overflow-hidden">
+     <section className="min-h-screen pt-16 pb-8 px-6 relative overflow-hidden">
+
       {/* Background decorative elements */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className={`mb-16 transition-all duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+         <div className={`mb-8 transition-all duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+
           <span className="text-accent text-sm font-semibold uppercase tracking-widest">Portfolio</span>
           <h2 className="text-5xl md:text-6xl font-bold mt-2 leading-tight">
             Selected
@@ -194,7 +196,8 @@ export function ProjectsGallery() {
         </div>
 
         {/* Category Filter */}
-        <div className={`mb-12 transition-all duration-700 delay-200 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+         <div className={`mb-6 transition-all duration-700 delay-200 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+
           <div className="flex flex-wrap gap-3">
             {categories.map((cat) => (
               <button
@@ -234,7 +237,7 @@ export function ProjectsGallery() {
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/5 transition-all duration-500"></div>
                   </div>
 
                   {/* Content */}

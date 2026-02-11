@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 
 export default function Exploration() {
   return (
-    <main className="bg-black">
+    <main>
       <Navigation />
       <ExplorationSection />
       <Footer />

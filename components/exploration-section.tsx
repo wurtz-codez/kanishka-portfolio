@@ -32,7 +32,7 @@ export function ExplorationSection() {
   ]
 
   return (
-    <section className="min-h-screen pt-40 pb-20 px-6 relative overflow-hidden">
+    <section className="min-h-screen pt-16 pb-8 px-6 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>

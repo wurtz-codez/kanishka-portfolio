@@ -77,14 +77,15 @@ export function SkillsSection() {
   const CurrentIcon = currentCategory.icon
 
   return (
-    <section className="min-h-screen pt-40 pb-20 px-6 relative overflow-hidden">
+    <section className="min-h-screen pt-16 pb-8 px-6 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className={`mb-16 transition-all duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+         <div className={`mb-8 transition-all duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+
           <span className="text-accent text-sm font-semibold uppercase tracking-widest">Skills & Tools</span>
           <h2 
             ref={skillsTitleRef}
@@ -102,7 +103,8 @@ export function SkillsSection() {
         </div>
 
         {/* Category Tabs */}
-        <div className={`mb-12 transition-all duration-700 delay-200 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+         <div className={`mb-6 transition-all duration-700 delay-200 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+
           <div className="flex flex-wrap gap-3">
             {categories.map((cat) => {
               const Icon = cat.icon

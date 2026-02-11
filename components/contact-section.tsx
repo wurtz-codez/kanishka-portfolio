@@ -78,14 +78,14 @@ export function ContactSection() {
   ]
 
   return (
-    <section id="contact" className="min-h-screen pt-40 pb-20 px-6 relative overflow-hidden">
+    <section id="contact" className="min-h-screen pt-16 pb-8 px-6 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className={`mb-16 transition-all duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+        <div className={`mb-8 transition-all duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
           <span className="text-accent text-sm font-semibold uppercase tracking-widest">Get In Touch</span>
           <h2 
             ref={contactTitleRef}
@@ -104,7 +104,7 @@ export function ContactSection() {
 
         {/* Contact Info Cards */}
         <div
-          className={`mb-16 grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-700 delay-200 ${
+          className={`mb-8 grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-700 delay-200 ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -137,7 +137,7 @@ export function ContactSection() {
 
         {/* Contact Form */}
         <div
-          className={`bg-gradient-to-br from-gray-900/50 to-gray-950/50 border border-gray-800 rounded-lg p-8 md:p-12 transition-all duration-700 delay-300 ${
+          className={`bg-gradient-to-br from-gray-900/50 to-gray-950/50 border border-gray-800 rounded-lg p-6 md:p-8 transition-all duration-700 delay-300 ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -167,7 +167,7 @@ export function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300"
                   placeholder="Your name"
                 />
               </div>
@@ -182,7 +182,7 @@ export function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300"
                   placeholder="your@email.com"
                 />
               </div>
@@ -200,7 +200,7 @@ export function ContactSection() {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-black border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300"
+                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300"
                 placeholder="What's this about?"
               />
             </div>
@@ -217,7 +217,7 @@ export function ContactSection() {
                 onChange={handleChange}
                 required
                 rows={6}
-                className="w-full px-4 py-3 bg-black border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300 resize-none"
+                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-gray-500 focus:border-accent focus:outline-none transition-all duration-300 resize-none"
                 placeholder="Tell me about your project or ideas..."
               ></textarea>
             </div>
@@ -226,7 +226,7 @@ export function ContactSection() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full md:w-auto px-8 py-4 bg-accent text-black font-semibold rounded-lg hover:bg-accent-dark disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-2"
+              className="w-full md:w-auto px-8 py-3 bg-accent text-black font-semibold rounded-lg hover:bg-accent-dark disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 <>
@@ -245,11 +245,11 @@ export function ContactSection() {
 
         {/* Social Links */}
         <div
-          className={`mt-16 text-center transition-all duration-700 delay-400 ${
+          className={`mt-8 text-center transition-all duration-700 delay-400 ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
         >
-          <p className="text-gray-400 mb-6">Or find me on social media</p>
+          <p className="text-gray-400 mb-3">Or find me on social media</p>
           <div className="flex justify-center gap-6">
             {socialLinks.map((social) => {
               const Icon = social.icon
@@ -271,11 +271,11 @@ export function ContactSection() {
 
         {/* Closing Message */}
         <div
-          className={`mt-16 text-center transition-all duration-700 delay-500 ${
+          className={`mt-8 text-center transition-all duration-700 delay-500 ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="bg-gradient-to-r from-accent/5 to-transparent border border-gray-800 rounded-lg p-8">
+          <div className="bg-gradient-to-r from-accent/5 to-transparent border border-gray-800 rounded-lg p-6">
             <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Whether you need a brand identity, website design, or simply want to discuss creative ideas, I'm here to
               help. Let's create something meaningful together.

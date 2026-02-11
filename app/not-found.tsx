@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react"
 
 export default function NotFound() {
   return (
-    <main className="bg-black">
+    <main>
       <Navigation />
       <section className="min-h-screen pt-40 pb-20 px-6 relative overflow-hidden flex items-center">
         {/* Background decorative elements */}

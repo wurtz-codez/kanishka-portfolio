@@ -11,7 +11,7 @@ import { ContactSection } from "@/components/contact-section"
 
 export default function Home() {
   return (
-    <main className="bg-black overflow-x-hidden">
+    <main className="overflow-x-hidden">
       <Navigation />
       <section id="home" data-section>
         <HeroSection />
